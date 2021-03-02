@@ -53,9 +53,11 @@ public:
 			DeleteKey(key);
 			AddRecent(key, val);
 		}
-		if (cache.size() == capacity)
-			DeleteLeastRecent();
-		AddRecent(key, val);
+		else{
+		        if (cache.size() == capacity)
+			        DeleteLeastRecent();
+			AddRecent(key, val);
+		}
 	}
 };
 

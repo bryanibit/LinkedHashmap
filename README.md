@@ -1,6 +1,7 @@
 ## What is the Project
 
 The project is used for building linked hashmap with C++. LRU(Least Recently Used) is widely used in recent app, which is an example of linked hashmap.
+The similar project is from [LRUCache in LeetCode](https://leetcode.com/problems/lru-cache). You can put multiple same keys but the container only saves one.
 
 ## What is the point
 
