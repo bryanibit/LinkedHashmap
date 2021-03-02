@@ -18,11 +18,14 @@ private:
 	list < Node<T, S> > cache;
 	unordered_map<T, typename list < Node<T, S> >::iterator > map;
 	void MakeRecent(T key) {
-		auto iter = map[key];
-		auto node = *iter;
-		cache.erase(iter);
-		cache.push_back(node);
-		map[key] = prev(cache.end());
+		// auto iter = map[key];
+		// auto node = *iter;
+		// cache.erase(iter);
+		// cache.push_back(node);
+		// map[key] = prev(cache.end());
+		auto val = map[key]->val;
+		DeleteKey(key);
+		AddRecent(key, val);
 	}
 	void AddRecent(T key, S val) {
 		cache.emplace_back(key, val);
